@@ -1,4 +1,4 @@
-import image from "../assets/images/banner.webp";
+import image from "../assets/images/tavopaz12-1.png";
 
 import "../styles/About/About.scss";
 
