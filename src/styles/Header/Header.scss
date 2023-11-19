@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+:root {
+  --color-white-100: hsl(206, 5%, 100%);
+  --color-white-200: hsl(206, 5%, 90%);
+  --color-white-300: hsl(206, 5%, 80%);
+  --color-white-400: hsl(206, 5%, 65%);
+  --color-white-500: hsl(206, 5%, 50%);
+
+  --color-black-100: hsl(213, 20%, 10%);
+  --color-black-200: hsl(213, 23%, 8%);
+  --color-black-300: hsl(214, 21%, 6%);
+  --color-black-400: hsl(210, 21%, 6%);
+  --color-black-500: hsl(216, 22%, 4%);
+  --color-black-600: hsl(220, 18%, 3%);
+  --color-black-700: hsl(220, 27%, 2%);
+  --color-black-800: hsl(180, 20%, 1%);
+
+  --color-blue-100: hsl(214, 95%, 93%);
+  --color-blue-200: hsl(213, 97%, 87%);
+  --color-blue-300: hsl(212, 96%, 78%);
+  --color-blue-400: hsl(213, 94%, 68%);
+  --color-blue-500: hsl(217, 91%, 60%);
+  --color-blue-600: hsl(221, 83%, 53%);
+  --color-blue-700: hsl(224, 76%, 48%);
+  --color-blue-800: hsl(226, 71%, 40%);
+  --color-blue-900: hsl(224, 64%, 33%);
+
+  --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+a,
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  user-select: none;
+  background: none;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+// Header Section
+.header {
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: auto;
+  margin: 0 auto;
+}
+
+.navbar {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 1.25rem;
+  height: 4.25rem;
+}
+
+.brand {
+  font-family: "Gochi Hand", cursive;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 4rem 0 3rem;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow-medium);
+  transition: all 0.4s ease-in-out;
+
+  .active {
+    border-bottom: 2px solid rgb(0, 162, 255);
+  }
+
+  &.is-active {
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.25rem;
+  }
+
+  &-link {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-white-100);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  &-block {
+    font-family: inherit;
+    margin-right: 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+    margin-left: auto;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    text-transform: capitalize;
+    color: white;
+    background-color: var(--third-color);
+    transition: all 0.3s ease-in-out;
+  }
+
+  @media only screen and (min-width: 48rem) {
+    position: relative;
+    top: 0;
+    width: auto;
+    height: auto;
+    padding: 0rem;
+    margin-left: auto;
+    background: none;
+    box-shadow: none;
+
+    &-inner {
+      display: flex;
+      flex-direction: row;
+      column-gap: 2rem;
+      margin: 0 auto;
+    }
+
+    &-link {
+      text-transform: capitalize;
+    }
+
+    &-block {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  order: -1;
+  z-index: 10;
+  width: 1.6rem;
+  height: 1.15rem;
+  border: none;
+  outline: none;
+  background: none;
+  visibility: visible;
+  transform: rotate(0deg);
+  transition: 0.35s ease;
+
+  @media only screen and (min-width: 48rem) {
+    display: none;
+    visibility: hidden;
+  }
+
+  &-line {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 1.75px;
+    border: none;
+    outline: none;
+    opacity: 1;
+    transform: rotate(0deg);
+    background-color: var(--color-white-100);
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2) {
+      top: 0.5rem;
+      width: 70%;
+    }
+    &:nth-child(3) {
+      top: 1rem;
+    }
+  }
+
+  &.is-active .burger-line {
+    &:nth-child(1) {
+      top: 0.5rem;
+      transform: rotate(135deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:nth-child(3) {
+      top: 0.5rem;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.banner {
+  &-column {
+    position: relative;
+    display: grid;
+    align-items: center;
+    row-gap: 3rem;
+
+    @media only screen and (min-width: 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      justify-content: center;
+    }
+
+    @media only screen and (min-width: 64rem) {
+      grid-template-columns: 1fr max-content;
+      column-gap: 4rem;
+      margin-top: 3rem;
+    }
+  }
+
+  &-image {
+    display: block;
+    max-width: 18rem;
+    height: auto;
+    margin-top: 2rem;
+    object-fit: cover;
+    justify-self: center;
+
+    @media only screen and (min-width: 48rem) {
+      order: 1;
+      max-width: 20rem;
+      height: auto;
+    }
+
+    @media only screen and (min-width: 64rem) {
+      max-width: 25rem;
+      height: auto;
+      margin-right: 5rem;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1.75rem;
+  }
+
+  &-links {
+    position: absolute;
+    top: 30%;
+    right: 1.5rem;
+    display: grid;
+    justify-items: center;
+    row-gap: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+
+    @media only screen and (min-width: 64rem) {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    & > * {
+      font-size: 1.25rem;
+      line-height: 1.25;
+      color: var(--color-white-100);
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -3rem;
+      width: 4rem;
+      height: 1.5px;
+      transform: rotate(90deg);
+      background-color: red;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -3rem;
+      width: 4rem;
+      height: 2px;
+      transform: rotate(90deg);
+      background-color: red;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Architects+Daughter&family=Cabin:wght@500&family=Changa+One&family=Covered+By+Your+Grace&family=DM+Sans:wght@400;700&family=Delicious+Handrawn&family=Gochi+Hand&family=Grape+Nuts&family=Handlee&family=Indie+Flower&family=Inspiration&family=Kalam&family=Kanit&family=Leckerli+One&family=Lilita+One&family=Montez&family=Noto+Nastaliq+Urdu&family=Noto+Sans&family=Pacifico&family=Press+Start+2P&family=Ribeye&family=Righteous&family=Roboto:wght@700&family=Rock+Salt&family=Rubik+Vinyl&family=Secular+One&family=Shadows+Into+Light&family=Skranji&family=Spectral:ital,wght@1,800&family=Sriracha&family=Yeseva+One&display=swap");
+
+.title {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Spectral", serif;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: 5px;
+  scrollbar-color: #a5d7e8 black;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a5d7e8;
+  border-radius: 20px;
+}
+
+input:-webkit-autofill {
+  color-scheme: dark;
+}
+
+// font-family: "Covered By Your Grace", cursive;
+// font-family: "Gochi Hand", cursive;
+// font-family: "Grape Nuts", cursive;
+// font-family: "Handlee", cursive;
+// font-family: "Indie Flower", cursive;
+// font-family: "Kalam", cursive;
+// font-family: "Skranji", cursive;

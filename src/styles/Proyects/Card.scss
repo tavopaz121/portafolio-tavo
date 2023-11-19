@@ -1,0 +1,132 @@
+.card__proyect {
+  border: 1px solid black;
+  width: 60%;
+  height: 200px;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(27, 30, 35, 0.2);
+
+  border: 1px solid rgba($color: #a5d7e8, $alpha: 0.3);
+
+  .card__image {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .card__info {
+    padding: 1rem;
+    width: 50%;
+    display: flex;
+    display: grid;
+    place-items: center;
+
+    .tecnologys {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+
+      .container {
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 0.9rem;
+        color: rgba($color: #ffffff, $alpha: 0.7);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        border-radius: 1rem;
+        padding: 0.2rem 0.8rem;
+        border: 1px solid rgba($color: #a5d7e8, $alpha: 0.3);
+      }
+    }
+  }
+
+  .info {
+    width: 100%;
+
+    .title__proyect {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .desc {
+      text-align: left;
+      color: var(--secondary-text-color);
+    }
+
+    .links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .view__demo {
+        background-color: var(--secondary-color);
+        border: 1px solid transparent;
+        padding: 0.5rem 1rem;
+        color: white;
+        border-radius: 1rem;
+
+        &:hover {
+          transition: all 1s ease-in-out;
+          background-color: rgba($color: #053142, $alpha: 1);
+        }
+      }
+
+      .view__code {
+        border: 1px solid var(--light-color);
+        padding: 0.5rem 1rem;
+        color: white;
+        border-radius: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card__proyect {
+    width: 90%;
+    height: 400px;
+    flex-direction: column;
+
+    .card__image {
+      width: 100%;
+      height: 200px;
+    }
+
+    .card__info {
+      padding: 1rem;
+      display: flex;
+      width: auto;
+
+      .tecnologys {
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+
+    .info {
+      width: 100%;
+
+      .title__proyect {
+        text-align: center;
+      }
+    }
+  }
+}
