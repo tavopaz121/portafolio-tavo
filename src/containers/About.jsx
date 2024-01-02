@@ -1,4 +1,4 @@
-import image from "../assets/images/tavopaz12-1.png";
+import image from "../assets/images/foto-pro-tavo.png";
 
 import "../styles/About/About.scss";
 
