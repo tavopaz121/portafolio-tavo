@@ -1,0 +1,67 @@
+.about {
+  padding: 1rem;
+  margin-top: 2rem;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+
+  .about__card {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .image {
+      width: 300px;
+      padding: 1rem;
+      border: 3px solid rgb(11, 174, 196);
+
+      img {
+        object-fit: cover;
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .biografia {
+      width: 60%;
+      text-align: left;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      color: rgba($color: #ffffff, $alpha: 0.6);
+
+      p {
+        margin-bottom: 0.4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about {
+    height: auto;
+
+    .about__card {
+      display: grid;
+      place-items: center;
+
+      .image {
+        width: 200px;
+
+        img {
+          object-fit: cover;
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      .biografia {
+        width: 100%;
+      }
+    }
+  }
+}

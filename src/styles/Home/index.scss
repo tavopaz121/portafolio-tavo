@@ -1,0 +1,208 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../../assets/images/shape.svg");
+  background-size: cover;
+  color: white;
+  gap: 5rem;
+
+  .description {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    width: 50%;
+
+    .description__title {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+
+      .description__blue {
+        color: var(--light-color);
+      }
+    }
+
+    .info {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: var(--secondary-text-color);
+    }
+
+    .link__redes {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+
+      .contact__me__container {
+        display: flex;
+        gap: 1rem;
+        .contact__me {
+          background-color: var(--secondary-color);
+          border-radius: 1rem;
+          padding: 0.8rem 1.5rem;
+
+          p {
+            color: white;
+            font-weight: bold;
+          }
+        }
+
+        .buy__a__cooffe {
+          border: 1px solid var(--light-color);
+          border-radius: 1rem;
+          padding: 0.8rem 1.5rem;
+
+          p {
+            color: white;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .redes {
+        display: flex;
+        gap: 1rem;
+
+        .logo__container {
+          background-color: black;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.4rem;
+
+          img {
+            width: 25px;
+            cursor: pointer;
+            object-fit: cover;
+            height: 25px;
+            filter: invert(1);
+          }
+
+          img:hover {
+            filter: invert(0.5) sepia(2) hue-rotate(150deg) saturate(1000%);
+          }
+        }
+      }
+    }
+  }
+
+  .image__profile {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .banner__profile {
+      box-shadow: 0px 0px 3px 3px white;
+      width: 300px;
+      border-radius: 50% 30% 50% 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home {
+    flex-direction: column;
+    height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+
+    .description {
+      width: 100%;
+      font-size: 1rem;
+      padding: 1rem;
+      line-height: 2.5rem;
+
+      .description__title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+
+        .description__blue {
+          color: var(--light-color);
+        }
+      }
+
+      .info {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        text-align: center;
+        color: var(--secondary-text-color);
+      }
+
+      .link__redes {
+        margin-top: 1rem;
+        gap: 2rem;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        .contact__me__container {
+          order: -1;
+          gap: 0.5rem;
+          display: flex;
+          text-align: center;
+          width: 90%;
+
+          .contact__me {
+            width: 50%;
+            padding: 0.3rem 0.5rem;
+          }
+          .buy__a__cooffe {
+            width: 50%;
+            padding: 0.2rem;
+          }
+        }
+      }
+    }
+
+    .image__profile {
+      order: -1;
+      margin-top: 3rem;
+
+      .banner__profile {
+        width: 250px;
+      }
+    }
+  }
+}
+
+@keyframes zoom-animate {
+  0% {
+    transform: scale(1, 1) translateZ(1px);
+  }
+  100% {
+    transform: scale(1.2, 1.2) translateZ(1px);
+  }
+}
+
+@keyframes hero_morph {
+  0% {
+    border-radius: 40% 60% 60% 40%/60% 30% 70% 40%;
+  }
+
+  to {
+    border-radius: 40% 60%;
+  }
+}
+
+.hero__shape {
+  width: 100%;
+  animation: hero_morph 8s ease-in-out infinite alternate both;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.image__animated {
+  animation: zoom-animate 10s linear infinite alternate;
+}
